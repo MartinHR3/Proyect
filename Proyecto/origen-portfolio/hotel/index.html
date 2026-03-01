@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ceniza | Hotel Boutique</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">C E N I Z A</a>
+            <div class="nav-menu">
+                <a href="#experiencias">Experiencias</a>
+                <a href="#reservas">Reservas</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content fade-in-element">
+            <h1>Santuario Volcánico</h1>
+            <p>Donde la calma absoluta se encuentra con la belleza salvaje de la tierra.</p>
+            <div class="scroll-down">
+                <span>Descubrir</span>
+                <div class="mouse"></div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="experiencias" class="experiences">
+            <div class="container">
+                <div class="section-header fade-in-element">
+                    <h2>Experiencias</h2>
+                    <p>Sumérjase en un retiro de lujo consciente diseñado para despertar sus sentidos.</p>
+                </div>
+
+                <div class="experiences-grid">
+                    <div class="experience-card fade-in-element">
+                        <div class="img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&q=80&w=800"
+                                alt="Spa termal">
+                        </div>
+                        <div class="card-content">
+                            <h3>Spa Termal</h3>
+                            <p>Aguas telúricas y tratamientos inspirados en los elementos locales.</p>
+                        </div>
+                    </div>
+
+                    <div class="experience-card fade-in-element pt-delay-1">
+                        <div class="img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&q=80&w=800"
+                                alt="Gastronomía">
+                        </div>
+                        <div class="card-content">
+                            <h3>Gastronomía</h3>
+                            <p>Cocina de entorno, honrando los productos cultivados en suelo volcánico.</p>
+                        </div>
+                    </div>
+
+                    <div class="experience-card fade-in-element pt-delay-2">
+                        <div class="img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1506012787146-f92b2d7d6d96?auto=format&fit=crop&q=80&w=800"
+                                alt="Vistas al atardecer">
+                        </div>
+                        <div class="card-content">
+                            <h3>Vistas Infinitas</h3>
+                            <p>Terrazas privadas con panorámicas ininterrumpidas del horizonte atlántico.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="reservas" class="booking-section fade-in-element">
+            <div class="booking-container">
+                <h2>Su Retiro Comienza Aquí</h2>
+                <form class="minimal-booking-form">
+                    <div class="form-group">
+                        <label for="checkin">Llegada</label>
+                        <input type="date" id="checkin" name="checkin">
+                    </div>
+                    <div class="form-group">
+                        <label for="checkout">Salida</label>
+                        <input type="date" id="checkout" name="checkout">
+                    </div>
+                    <div class="form-group guests">
+                        <label for="guests">Huéspedes</label>
+                        <select id="guests" name="guests">
+                            <option value="1">1 Adulto</option>
+                            <option value="2" selected>2 Adultos</option>
+                            <option value="3">3 Adultos</option>
+                            <option value="4">4 Adultos</option>
+                        </select>
+                    </div>
+                    <button type="button" class="btn-book">Consultar Disponibilidad</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-inner fade-in-element">
+            <div class="logo">C E N I Z A</div>
+            <p class="hotel-info">Carretera del Volcán s/n, Canarias</p>
+            <div class="footer-links">
+                <a href="#">Privacidad</a>
+                <a href="#">Términos</a>
+            </div>
+            <p class="powered-by">Powered by <a href="../index.html">ORIGEN</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

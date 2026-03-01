@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ORIGEN | Estudio Digital</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&family=Inter:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">O.</div>
+        <div class="nav-links">
+            <a href="#filosofia">Filosofía</a>
+            <a href="#proyectos">Proyectos</a>
+            <a href="#contacto">Contacto</a>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">ORIGEN</h1>
+                <p class="hero-subtitle">Forja digital desde Canarias. Creamos el punto de partida de tu éxito online.
+                </p>
+            </div>
+
+            <a href="#filosofia" class="scroll-indicator">
+                <span>DESCUBRE</span>
+                <div class="line"></div>
+            </a>
+
+            <div class="glow lava-glow"></div>
+        </section>
+
+        <section id="filosofia" class="philosophy">
+            <div class="container">
+                <h2 class="section-title">El Fuego Creador</h2>
+                <div class="philosophy-text">
+                    <p>En ORIGEN, creemos en la reducción a lo esencial. Eliminamos el ruido para que tu marca brille
+                        con luz propia.</p>
+                    <p>Nos enfocamos en <strong>código puro</strong>, <strong>diseño minimalista</strong> y
+                        <strong>resultados potentes</strong>. Cada proyecto es una erupción de creatividad controlada,
+                        forjando experiencias digitales que dejan huella y perduran en el tiempo.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="proyectos" class="projects">
+            <div class="container">
+                <h2 class="section-title">Nuestra Forja</h2>
+                <div class="projects-grid">
+                    <a href="restaurant/index.html" class="project-card">
+                        <div class="project-image"
+                            style="background-image: url('https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&q=80&w=800');">
+                            <div class="project-overlay">
+                                <h3>La Brasa</h3>
+                                <p>Alta Cocina</p>
+                                <span class="view-btn">Ver Demo</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="hotel/index.html" class="project-card">
+                        <div class="project-image"
+                            style="background-image: url('https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&q=80&w=800');">
+                            <div class="project-overlay">
+                                <h3>Ceniza Boutique</h3>
+                                <p>Hotel Exclusivo</p>
+                                <span class="view-btn">Ver Demo</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contacto">
+        <div class="container footer-content">
+            <h2>¿Listo para encender la chispa?</h2>
+            <p>Hagamos que tu proyecto sea inconfundible.</p>
+            <a href="mailto:hola@origen.com" class="cta-button">Inicia tu origen</a>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 ORIGEN | Estudio Digital. Forjado en Canarias.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple scroll reveal animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section, .project-card').forEach(el => {
+            el.classList.add('fade-in-up');
+            observer.observe(el);
+        });
+    </script>
+</body>
+
+</html>

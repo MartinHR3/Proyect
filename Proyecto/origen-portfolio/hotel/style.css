@@ -1,0 +1,456 @@
+:root {
+    --ash-grey: #e6e8e8;
+    --dark-wood: #3e332a;
+    --dark-ash: #4a4f52;
+    --pure-white: #ffffff;
+    --text-color: #333333;
+    --font-main: 'Montserrat', sans-serif;
+    --transition-slow: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--ash-grey);
+    color: var(--text-color);
+    font-family: var(--font-main);
+    font-weight: 300;
+    line-height: 1.8;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+/* Navbar */
+.navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 3rem 0;
+    z-index: 100;
+    background: transparent;
+}
+
+.nav-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--pure-white);
+}
+
+.logo {
+    font-size: 1.5rem;
+    letter-spacing: 10px;
+    font-weight: 400;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 3rem;
+}
+
+.nav-menu a {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.nav-menu a:hover {
+    opacity: 1;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--pure-white);
+    overflow: hidden;
+}
+
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    background-image: url('https://images.unsplash.com/photo-1610641818989-c2051b5e2cfd?auto=format&fit=crop&q=80&w=1600');
+    /* Modern villa */
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    /* Subtle parallax and slow zoom handled by JS if needed, but CSS transform is fine for simple zoom */
+    animation: slowZoom 20s linear infinite alternate;
+}
+
+@keyframes slowZoom {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.1) 50%, var(--ash-grey) 100%);
+    z-index: 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+    max-width: 800px;
+    padding: 0 2rem;
+}
+
+.hero-content h1 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    margin-bottom: 1.5rem;
+}
+
+.hero-content p {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    opacity: 0.9;
+    letter-spacing: 1px;
+}
+
+.scroll-down {
+    position: absolute;
+    bottom: 4rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    z-index: 10;
+}
+
+.scroll-down span {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 0.7;
+}
+
+.mouse {
+    width: 20px;
+    height: 35px;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    position: relative;
+}
+
+.mouse::before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 5px;
+    background: white;
+    border-radius: 2px;
+    animation: scrollAnimation 1.5s infinite;
+}
+
+@keyframes scrollAnimation {
+    0% {
+        top: 5px;
+        opacity: 1;
+    }
+
+    100% {
+        top: 15px;
+        opacity: 0;
+    }
+}
+
+/* Experiences */
+.experiences {
+    padding: 10rem 0;
+    background-color: var(--pure-white);
+}
+
+.section-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 6rem;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    color: var(--dark-ash);
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.section-header p {
+    font-size: 1.1rem;
+    color: var(--dark-ash);
+    opacity: 0.8;
+}
+
+.experiences-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+.experience-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.img-wrapper {
+    width: 100%;
+    aspect-ratio: 3/4;
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+.img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 1.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.experience-card:hover .img-wrapper img {
+    transform: scale(1.05);
+}
+
+.card-content h3 {
+    font-size: 1.5rem;
+    color: var(--dark-wood);
+    margin-bottom: 1rem;
+}
+
+.card-content p {
+    color: var(--dark-ash);
+    font-size: 0.95rem;
+}
+
+/* Booking Section */
+.booking-section {
+    padding: 10rem 0;
+    background-color: var(--ash-grey);
+}
+
+.booking-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: var(--pure-white);
+    padding: 5rem;
+    text-align: center;
+    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.05);
+}
+
+.booking-container h2 {
+    font-size: 2rem;
+    color: var(--dark-wood);
+    margin-bottom: 3rem;
+    letter-spacing: 4px;
+}
+
+.minimal-booking-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    flex: 1;
+    min-width: 150px;
+}
+
+.form-group label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--dark-ash);
+    margin-bottom: 0.8rem;
+}
+
+.form-group input,
+.form-group select {
+    border: none;
+    border-bottom: 1px solid rgba(74, 79, 82, 0.3);
+    padding: 0.5rem 0;
+    font-family: inherit;
+    font-size: 1rem;
+    color: var(--dark-wood);
+    background: transparent;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: var(--dark-wood);
+}
+
+.btn-book {
+    background-color: var(--dark-wood);
+    color: var(--pure-white);
+    border: none;
+    padding: 1rem 3rem;
+    font-family: inherit;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    height: 45px;
+    flex: 1;
+    min-width: 250px;
+}
+
+.btn-book:hover {
+    background-color: var(--dark-ash);
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark-wood);
+    color: var(--pure-white);
+    padding: 6rem 0;
+    text-align: center;
+}
+
+.footer-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.footer-inner .logo {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.hotel-info {
+    opacity: 0.6;
+    font-size: 0.9rem;
+}
+
+.footer-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.footer-links a {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+}
+
+.footer-links a:hover {
+    opacity: 1;
+}
+
+.powered-by {
+    margin-top: 4rem;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.4;
+}
+
+.powered-by a {
+    color: inherit;
+    font-weight: 500;
+}
+
+.powered-by a:hover {
+    opacity: 1;
+}
+
+/* Animations (Intersection Observer linked) */
+.fade-in-element {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity var(--transition-slow), transform var(--transition-slow);
+}
+
+.fade-in-element.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.pt-delay-1 {
+    transition-delay: 0.2s;
+}
+
+.pt-delay-2 {
+    transition-delay: 0.4s;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .experiences-grid {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+
+    .booking-container {
+        padding: 3rem 2rem;
+    }
+
+    .minimal-booking-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btn-book {
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+    }
+}

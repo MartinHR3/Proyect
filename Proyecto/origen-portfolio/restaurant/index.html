@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Brasa | Alta Cocina</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">La Brasa</a>
+            <div class="nav-links">
+                <a href="#experiencia">Experiencia</a>
+                <a href="#carta">Carta</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>El fuego hecho arte</h1>
+            <p>Una experiencia gastronómica donde el origen del sabor cobra vida.</p>
+            <a href="#carta" class="btn-outline">Descubrir la carta</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="experiencia" class="experience">
+            <div class="container split-layout">
+                <div class="text-block">
+                    <h2>Culto a la materia prima</h2>
+                    <p>En La Brasa, cada ingrediente es seleccionado con rigor. Nuestra cocina es un tributo al fuego,
+                        transformando productos locales excepcionales en obras maestras de la alta cocina.</p>
+                </div>
+                <div class="image-block">
+                    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=800"
+                        alt="Detalle de plato alta cocina">
+                </div>
+            </div>
+        </section>
+
+        <section id="carta" class="menu-section">
+            <div class="container">
+                <div class="menu-wrapper">
+                    <h2 class="menu-title">La Carta</h2>
+
+                    <div class="menu-category">
+                        <h3>Entrantes</h3>
+                        <ul class="menu-list">
+                            <li class="menu-item">
+                                <div class="menu-item-header">
+                                    <span class="menu-item-name">Ostra Ahumada al Carbón</span>
+                                    <span class="menu-item-dots"></span>
+                                    <span class="menu-item-price">24€</span>
+                                </div>
+                                <p class="menu-item-desc">Emulsión de cítricos, caviar de beluga y humo de encina.</p>
+                            </li>
+                            <li class="menu-item">
+                                <div class="menu-item-header">
+                                    <span class="menu-item-name">Carpaccio de Wagyu</span>
+                                    <span class="menu-item-dots"></span>
+                                    <span class="menu-item-price">32€</span>
+                                </div>
+                                <p class="menu-item-desc">Láminas maduradas 40 días, trufa negra y aceite de oliva
+                                    virgen extra temprano.</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="menu-category">
+                        <h3>Principales</h3>
+                        <ul class="menu-list">
+                            <li class="menu-item">
+                                <div class="menu-item-header">
+                                    <span class="menu-item-name">Rodaballo Salvaje</span>
+                                    <span class="menu-item-dots"></span>
+                                    <span class="menu-item-price">45€</span>
+                                </div>
+                                <p class="menu-item-desc">Asado a la parrilla de sarmientos, bilbaína tradicional y
+                                    patata ratte.</p>
+                            </li>
+                            <li class="menu-item">
+                                <div class="menu-item-header">
+                                    <span class="menu-item-name">Lomo de Ciervo</span>
+                                    <span class="menu-item-dots"></span>
+                                    <span class="menu-item-price">38€</span>
+                                </div>
+                                <p class="menu-item-desc">Estofado en sus jugos, reducción de vino tinto y puré de
+                                    castañas.</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="menu-category">
+                        <h3>Postres</h3>
+                        <ul class="menu-list">
+                            <li class="menu-item">
+                                <div class="menu-item-header">
+                                    <span class="menu-item-name">Texturas de Chocolate Negro</span>
+                                    <span class="menu-item-dots"></span>
+                                    <span class="menu-item-price">16€</span>
+                                </div>
+                                <p class="menu-item-desc">Cacao al 85%, toque de sal marina ahumada y aceite de
+                                    arbequina.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <a href="https://wa.me/34600000000" target="_blank" class="whatsapp-float">
+        Reservar via WhatsApp
+    </a>
+
+    <footer>
+        <div class="footer-container">
+            <p>La Brasa &copy; 2026</p>
+            <p class="origen-credit">Desarrollado por <a href="../index.html">ORIGEN | Estudio Digital</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Disappearing navigation on scroll down, reappear on scroll up
+        let lastScrollTop = 0;
+        const navbar = document.getElementById("navbar");
+
+        window.addEventListener("scroll", function () {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollTop > lastScrollTop && scrollTop > 50) {
+                // Scroll down
+                navbar.style.top = "-100px";
+            } else {
+                // Scroll up
+                navbar.style.top = "0";
+                if (scrollTop > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            }
+            lastScrollTop = scrollTop;
+        });
+    </script>
+</body>
+
+</html>

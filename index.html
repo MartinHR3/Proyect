@@ -18,7 +18,9 @@
         <div class="logo">O.</div>
         <div class="nav-links">
             <a href="#filosofia">Filosofía</a>
+            <a href="#servicios">Servicios</a>
             <a href="#proyectos">Proyectos</a>
+            <a href="#equipo">Equipo</a>
             <a href="#contacto">Contacto</a>
         </div>
     </nav>
@@ -39,6 +41,16 @@
             <div class="glow lava-glow"></div>
         </section>
 
+        <div class="tech-stack-wrapper">
+            <div class="tech-stack">
+                <div class="tech-track">
+                    <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>React</span><span>Node.js</span><span>WordPress</span><span>Figma</span>
+                    <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>React</span><span>Node.js</span><span>WordPress</span><span>Figma</span>
+                    <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>React</span><span>Node.js</span><span>WordPress</span><span>Figma</span>
+                </div>
+            </div>
+        </div>
+
         <section id="filosofia" class="philosophy">
             <div class="container">
                 <h2 class="section-title">El Fuego Creador</h2>
@@ -49,6 +61,36 @@
                         <strong>resultados potentes</strong>. Cada proyecto es una erupción de creatividad controlada,
                         forjando experiencias digitales que dejan huella y perduran en el tiempo.
                     </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="servicios" class="services">
+            <div class="container">
+                <h2 class="section-title">Nuestras Herramientas</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">✦</div>
+                        <h3>Desarrollo Web</h3>
+                        <p>Webs a medida, rápidas y escalables con código limpio y optimizado para el mejor rendimiento.
+                        </p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">✧</div>
+                        <h3>Diseño UI/UX</h3>
+                        <p>Interfaces impactantes e intuitivas que conectan con tus usuarios desde el primer clic.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">✺</div>
+                        <h3>E-Commerce</h3>
+                        <p>Tiendas online preparadas para convertir, con pasarelas de pago y gestión de stock integrada.
+                        </p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">✹</div>
+                        <h3>SEO & Rendimiento</h3>
+                        <p>Auditorías y optimización técnica para que tu marca destaque orgánicamente en buscadores.</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -80,13 +122,74 @@
                 </div>
             </div>
         </section>
+
+        <section class="testimonials">
+            <div class="container">
+                <h2 class="section-title">Ecos del Éxito</h2>
+                <div class="testimonial-slider">
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">"ORIGEN transformó por completo la imagen digital de nuestro
+                            restaurante. La nueva web refleja exactamente la elegancia de nuestros platos. Un equipo
+                            brillante."</p>
+                        <div class="testimonial-author">
+                            <span class="author-name">Carlos D.</span>
+                            <span class="author-role">Gerente, La Panacota</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">"Necesitábamos una plataforma sólida y atractiva para atraer
+                            reservas directas. El nivel de detalle y el rendimiento que lograron es excepcional."</p>
+                        <div class="testimonial-author">
+                            <span class="author-name">Elena M.</span>
+                            <span class="author-role">Directora, Gloria Palace</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="equipo" class="about">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2 class="section-title">Los Herreros</h2>
+                        <p>Detrás de ORIGEN hay un equipo de apasionados por el entorno digital. No somos una agencia
+                            tradicional; somos artesanos modernos que trabajan codo a codo en Canarias para el mundo.
+                        </p>
+                        <p>Creemos en la hiperespecialización, la comunicación directa y, sobre todo, en hacer el
+                            trabajo bien hecho. Tu proyecto está en manos de quienes lo escriben línea a línea.</p>
+                    </div>
+                    <div class="about-image">
+                        <div class="avatar-placeholder"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer id="contacto">
         <div class="container footer-content">
-            <h2>¿Listo para encender la chispa?</h2>
-            <p>Hagamos que tu proyecto sea inconfundible.</p>
-            <a href="mailto:hola@origen.com" class="cta-button">Inicia tu origen</a>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2>¿Listo para encender la chispa?</h2>
+                    <p>Hagamos que tu proyecto sea inconfundible.</p>
+                </div>
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" action="mailto:martinhr1303@gmail.com" method="POST"
+                        enctype="text/plain">
+                        <div class="form-group">
+                            <input type="text" name="Nombre" placeholder="Tu Nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="Correo" placeholder="Tu Correo" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="Mensaje" placeholder="Cuéntanos tu idea..." rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="cta-button form-submit">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
         </div>
         <div class="footer-bottom">
             <p>&copy; 2026 ORIGEN | Estudio Digital</p>

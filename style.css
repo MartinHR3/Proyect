@@ -722,8 +722,10 @@ footer {
 
     .team-photo {
         width: 100%;
-        max-width: 350px;
+        max-width: 280px;
         height: auto;
         aspect-ratio: 4/5;
+        margin: 0 auto;
+        display: block;
     }
 }
